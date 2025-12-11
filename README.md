@@ -1,7 +1,7 @@
-# Student Course Enrollment Database (Python + PostgreSQL)
+# Student Course Enrollment Database (Python + PostgreSQL) / EDA on a Fake created data using faker
 
-This project is a **command-line interface (CLI) app** for managing students, courses, and enrollments using **Python**, **PostgreSQL**, and the **psycopg2** driver.  
-You can add students or courses, enroll students in courses, view enrollments, and delete students, all from your terminal.
+This project is a **command-line interface (CLI) app** for managing students, courses, and enrollments using **Python**, **PostgreSQL**, and the **psycopg2** driver.  It also analyzes a database created using fake data from **faker** and saves the summary table to the connected database.
+
 
 ---
 
@@ -23,6 +23,7 @@ You can add students or courses, enroll students in courses, view enrollments, a
 - **PostgreSQL**
 - **psycopg2** (database driver)
 - **python-dotenv** (for environment variable management)
+- **EDA tools(numpy,pandas,matplotlib,seaborn)**
 
 ---
 
@@ -95,6 +96,8 @@ Just type the number of the operation you want, and follow the prompts.
 
 ```
 ├── connection.py         # Main Python script for CLI/database logic
+├── db_setup.py           # setting up tables
+├── analysis.ipynb        # ETL and analysis
 ├── requirements.txt      # Python dependencies
 ├── .env                  # (Not tracked) Your PostgreSQL credentials
 ├── .gitignore            # Ignores .env and venv
@@ -108,14 +111,11 @@ Just type the number of the operation you want, and follow the prompts.
 - The app uses descriptive error messages and transaction rollbacks for safe DB operations.
 - Table setup (students, courses, enrollments) and a helpful SQL view are managed automatically.
 - Enrolling or deleting students/courses will cascade related enrollments as appropriate.
+- EDA is performed using pandas and required libraries 
+
 
 ---
 
-## License
-
-MIT License (or your preferred license)
-
----
 
 ## Author
 
